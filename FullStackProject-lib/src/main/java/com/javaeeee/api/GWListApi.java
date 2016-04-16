@@ -22,9 +22,6 @@ public class GWListApi {
         this.profileDao = dao;
     }
 	
-	
-	
-	
 	public Item getItem(String itemid) throws ItemDaoException {
         return itemDao.getItem(itemid);
     }
@@ -35,6 +32,10 @@ public class GWListApi {
 	
 	public boolean updateItem(Item item) throws ItemDaoException {
 		return itemDao.updateItem(item);
+	}
+	
+	public void deleteItem(String itemid) throws ItemDaoException {
+		itemDao.deleteItem(itemid);
 	}
 	
 	public Profile getProfile(String userid) throws ProfileDaoException {
